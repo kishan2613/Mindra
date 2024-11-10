@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/style.css"/>
+</head>
+<body>
+    <div class="navbar">
+        <p class="logo">Mindra</p>
+        <input type="text" placeholder="     Search" class="search"/>
+        <a href="/posts/new" class="newpost">Create New Post</a>
+        <div class="navbar-icons">
+            <i class="fa-solid fa-house nav-icons one" style="color: #ffffff;" ></i>
+           <i class="fa-solid fa-globe nav-icons two" style="color: #f7f7f7;"></i>
+           <i class="fa-solid fa-user nav-icons three" style="color: #ffffff;"></i>
+        </div>        
+    </div>
+
+
+
+    <form method="post" action="/posts/<%=post.id%>?_method=PATCH">
+        <h2>Your post</h3>
+        <br>
+        <div class="card">
+            <div class="id">
+                <i class="fa-solid fa-user nav-icons three" style="color: #0e0e0e;"></i>
+                  <p class="username"><%=post.username%></p>
+             </div>
+                 <hr>
+                    
+                 <textarea name ="content" class="cont"><%=post.content%></textarea>
+
+                 <button class="btn1">Submit!!</button>           
+         </div>
+    </form>
+</body>
+</html>
